@@ -16,12 +16,5 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
-        binding.showBtn.setOnClickListener {
-            var msg: String = binding.userInput.text.toString()
-            Toast.makeText(this@MainActivity, msg, Toast.LENGTH_LONG).show()
-            binding.image1.setImageResource(R.drawable.biden)
-            binding.showBtn.text = msg
-        }
-
     }
 }
