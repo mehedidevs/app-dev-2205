@@ -1,6 +1,7 @@
 package com.mehedi.esappdev2205
 
 import android.app.Activity
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -14,6 +15,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.playBtn.setOnClickListener {
+            var intent = Intent(this, PlayActivity::class.java)
+
+            startActivity(intent)
+
+
+        }
 
 
     }
