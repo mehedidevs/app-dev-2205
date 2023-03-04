@@ -1,6 +1,7 @@
 package com.mehedi.esappdev2205
 
 import android.app.Activity
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -15,13 +16,14 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.playBtn.setOnClickListener {
+            var intent = Intent(this, PlayActivity::class.java)
 
-        binding.showBtn.setOnClickListener {
-            var msg: String = binding.userInput.text.toString()
-            Toast.makeText(this@MainActivity, msg, Toast.LENGTH_LONG).show()
-            binding.image1.setImageResource(R.drawable.biden)
-            binding.showBtn.text = msg
+            startActivity(intent)
+
+
         }
+
 
     }
 }
