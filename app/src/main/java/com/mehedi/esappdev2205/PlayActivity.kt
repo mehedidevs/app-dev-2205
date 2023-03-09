@@ -68,7 +68,7 @@ class PlayActivity : AppCompatActivity() {
     private var skip = 0
     var correct = 0
     var wrong = 0
-
+//
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
