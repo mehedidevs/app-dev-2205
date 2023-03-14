@@ -14,4 +14,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Es App Dev 2205"
 include ':app'
-include ':mylibrary'
+
