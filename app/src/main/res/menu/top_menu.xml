@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/sendMenu"
+        android:icon="@drawable/round_send_24"
+        android:title="send"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/galleryMenu"
+        android:icon="@drawable/ic_image_search_24"
+        android:title="Gallery"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/callMenu"
+        android:icon="@drawable/ic_call_end_24"
+        android:title="call"
+        app:showAsAction="always" />
+
+
+    <item
+        android:icon="@drawable/round_more_vert_24"
+        android:title="more"
+        app:showAsAction="always">
+
+        <menu>
+            <item
+                android:id="@+id/calculatorMenu"
+                android:icon="@drawable/baseline_calculate_24"
+                android:title="calculator" />
+            <item
+                android:id="@+id/exitMenu"
+                android:icon="@drawable/baseline_exit_to_app_24"
+                android:title="exit" />
+
+
+        </menu>
+
+    </item>
+
+</menu>
