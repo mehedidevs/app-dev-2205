@@ -6,3 +6,6 @@ import kotlinx.parcelize.Parcelize
 
 @Parcelize
 data class Image(var imageName: String, var imageUrl: String) : Parcelable
+
+
+//nnn
