@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/room_nav_graph"
+    app:startDestination="@id/homeFragment2">
+
+    <fragment
+        android:id="@+id/homeFragment2"
+        android:name="com.mehedi.esappdev2205.class23_room.HomeFragment"
+        android:label="fragment_home2"
+        tools:layout="@layout/fragment_home2">
+        <action
+            android:id="@+id/action_homeFragment2_to_addNoteFragment"
+            app:destination="@id/addNoteFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/addNoteFragment"
+        android:name="com.mehedi.esappdev2205.class23_room.AddNoteFragment"
+        android:label="fragment_add_note"
+        tools:layout="@layout/fragment_add_note" />
+
+
+</navigation>
