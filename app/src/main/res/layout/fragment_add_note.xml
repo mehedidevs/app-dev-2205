@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    android:orientation="vertical"
+    tools:context=".class23_room.AddNoteFragment">
+
+    <EditText
+        android:id="@+id/noteTitleEDt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="what is the next to do...?" />
+
+
+    <Button
+        android:id="@+id/datePickerBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="Pick a Date"
+        android:textAllCaps="false" />
+
+
+    <Button
+        android:id="@+id/timePickerBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="Pick a Time"
+        android:textAllCaps="false" />
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/priorityMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp" />
+
+
+    <Button
+        android:id="@+id/submitBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="Submit"
+        android:textAllCaps="false" />
+
+
+</LinearLayout>
