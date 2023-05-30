@@ -18,6 +18,10 @@ class FinalFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+        // Inflate the layout for this fragment
+        // Inflate the layout for this fragment
+        // Inflate the layout for this fragment
+        // Inflate the layout for this fragment
 
         binding = FragmentFinalBinding.inflate(layoutInflater, container, false)
 
