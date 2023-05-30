@@ -38,7 +38,7 @@ class AddNoteFragment : Fragment(), AdapterView.OnItemSelectedListener {
     lateinit var note: Note
 
 
-    // lateinit var database: NoteDatabase
+  lateinit var database: NoteDatabase
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
