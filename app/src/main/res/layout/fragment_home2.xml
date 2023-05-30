@@ -8,20 +8,20 @@
     tools:context=".class23_room.HomeFragment">
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/noteRCV"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-
         app:layout_constraintTop_toTopOf="parent"
         tools:listitem="@layout/item_note" />
 
 
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/addNote"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/addNote"
         android:layout_margin="8dp"
         android:fontFamily="@font/akaya_telivigala"
         android:gravity="center"

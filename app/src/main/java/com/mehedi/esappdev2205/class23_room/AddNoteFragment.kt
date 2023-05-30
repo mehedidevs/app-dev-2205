@@ -27,9 +27,18 @@ class AddNoteFragment : Fragment(), AdapterView.OnItemSelectedListener {
     private var time: String? = null
     private var selectedDate: String? = null
     private var priority: String? = null
+    private var noteId = 0
+
+    companion object {
+        var NOTE_ID = "note_id"
 
 
-    lateinit var database: NoteDatabase
+    }
+
+    lateinit var note: Note
+
+
+    // lateinit var database: NoteDatabase
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -38,13 +47,21 @@ class AddNoteFragment : Fragment(), AdapterView.OnItemSelectedListener {
         // Inflate the layout for this fragment
         binding = FragmentAddNoteBinding.inflate(inflater, container, false)
 
-        database =
-            Room.databaseBuilder(
-                requireActivity(),
-                NoteDatabase::class.java,
-                "Note-db"
-            ).allowMainThreadQueries()
-                .build()
+        noteId = requireArguments().getInt(NOTE_ID)
+
+        if (noteId != 0) {
+            note = NoteDatabase.getDB(requireContext()).getNoteDao()
+                .getNoteBYId(listOf<Int>(noteId))[0]
+
+            binding.apply {
+                noteTitleEDt.setText(note.title)
+                timePickerBtn.text = note.time
+                datePickerBtn.text = note.date
+
+            }
+
+
+        }
 
 
         var spinnerAdapter =
@@ -68,12 +85,14 @@ class AddNoteFragment : Fragment(), AdapterView.OnItemSelectedListener {
 
 
         binding.submitBtn.setOnClickListener {
+
+
             var titleStr = binding.noteTitleEDt.text.toString()
             var timeStr = time ?: "00:00"
             var dateStr = selectedDate ?: "0/0/00"
             var priorityStr = priority ?: priorityList[3]
 
-            var note =
+            note =
                 Note(
                     title = titleStr,
                     time = timeStr,
@@ -81,7 +100,12 @@ class AddNoteFragment : Fragment(), AdapterView.OnItemSelectedListener {
                     priority = priorityStr
                 )
 
-            database.getNoteDao().insertData(note)
+            if (noteId == 0) {
+                NoteDatabase.getDB(requireContext()).getNoteDao().insertData(note)
+            } else {
+                note.noteId = noteId
+                NoteDatabase.getDB(requireContext()).getNoteDao().updateNote(note)
+            }
 
 
         }
